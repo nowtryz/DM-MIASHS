@@ -1,0 +1,132 @@
+#englobante{
+	font-family: Roboto Lt;
+	width: 1200px;
+	margin-top: 50px;
+	text-align: left;
+}
+
+#left-map{
+	float: left; 
+	position: relative;
+}
+
+#covid-cards{
+	float:left;
+	width:680px;
+	padding-left:20px;
+}
+
+.card{
+	position: relative;
+	float:left;
+	height:185px;
+	width:160px;
+	border-radius: 10px;
+	border: 1px solid gray;
+	padding:14px;
+	/* espacées les une des autres de 14px donc chacune a une marge de 7px */
+	margin: 7px;
+}
+
+.drapeau{
+	float:left;
+	width:20px;
+	margin-right:10px;
+	position: relative;
+}
+
+.drapeau img {
+	/* position: absolute; */
+	left: 0;
+	bottom: 0;
+}
+
+a{
+	float:right;
+}
+
+.pays{
+	font-family:Oswald;
+	margin: 0;
+	font-size: 20px;
+}
+
+.card>.morts, .card>.cas {
+	position:absolute;
+	width:50px;
+	bottom: 14px;
+}
+
+.card>.morts>div, .card>.cas>div {
+	position: absolute;
+	bottom: 100%;
+	width: 100%;
+	text-align: center;
+}
+
+.card>.morts{
+	background-color:#fe5e54;
+	right: 50%;
+}
+
+.card>.cas{
+	background-color:#fcd200;
+	left: 50%;
+}
+
+#france>.morts{
+	height: 85px;
+}
+
+#france>.cas{
+	height: 35px;
+}
+
+#belgique>.morts{
+	height: 155px;
+}
+
+#belgique>.cas{
+	height: 53px;
+}
+
+#italie>.morts{
+	height: 106px;
+}
+
+#italie>.cas{ 
+	height: 30px;
+}
+
+#espagne>.morts{
+	height: 101px;
+}
+
+#espagne>.cas{
+	height: 37px;
+}
+
+#hongrie>.morts{
+	height: 69px;
+}
+
+#hongrie>.cas{
+height: 28px;
+}
+
+#legend{
+	line-height: 2em;
+	margin-bottom: -52px;
+	left: 0px;
+	position: relative;
+	bottom: 0px;
+	float: left;
+	
+}
+
+.square{
+	padding-left: 18px;
+	margin: 14px;
+
+}
+

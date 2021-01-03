@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+	<title>Le coronavirus en Europe</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="covid.css" />
+</head>
+<body>
+	<div id="englobante">
+		<h1>Le coronavirus en Europe</h1>
+		<div id="left-map">
+			<map>
+				<area shape="poly" coords="93,298,157,274,199,311,193,389,109,393,96,369" href="images/fr.svg" alt="france">
+				<area shape="poly" coords="57,277,175,267,192,288,183,301" href="images/be.svg" alt="belgique">
+				<area shape="poly" coords="271,483,238,468,237,409,198,461,187,354,202,350,251,340,304,434" href="images/it.svg" alt="italie">
+				<area shape="poly" coords="65,358,146,398,63,482,18,443,54,387,24,356" href="images/es.svg" alt="espagne">
+				<area shape="poly" coords="324,312,269,335,291,359,323,348,337,319" href="images/hu.svg" alt="hongrie">
+			</map>
+			<img src="images/europe.svg.svg">
+    	</div>	
+
+		<div id="covid-cards">	
+
+			<div class="card" id="france">
+	  			<div class="drapeau">
+	    		 	<img src="images/fr.svg">
+	  			</div>
+	  			<a href="#">
+	     			<img src="images/close.jpg" > 
+	   			</a>
+	   			<h1 class="pays">France</h1>
+	   			<div class="morts" dir="ladiv">
+	     			<div>853</div>
+	  			 </div>
+	    		<div class="cas" dir="ladiv">
+	     			<div>3.5%</div>
+	  		 	</div>
+			</div>
+
+	 		<div class="card" id="belgique">
+	  		 	<div class="drapeau">
+	     			<img src="images/be.svg">
+	   			</div>
+	   			<a href="#">
+	    			<img src="images/close.jpg" > 
+	   			</a>
+	   			<h1 class="pays">Belgique</h1>
+	   			<div class="morts" autofocus="ladiv">
+	     			<div>1549</div>
+	   			</div>
+	   		 	<div class="cas" autofocus="ladiv">
+	    			<div>5.3%</div>
+	   			</div>
+			</div>
+
+    		<div class="card" id="italie">
+	   			<div class="drapeau">
+	     			<img src="images/it.svg">
+	   			</div>
+	   			<a href="#">
+	     			<img src="images/close.jpg" > 
+	   			</a>
+	   			<h1 class="pays">Italie</h1>
+	   			<div class="morts" autofocus="ladiv">
+	     			<div>1062</div>
+	   			</div>
+	    		<div class="cas" autofocus="ladiv">
+	     			<div>3%</div>
+	   			</div>
+			</div>
+
+			<div class="card" id="espagne">
+	   			<div class="drapeau">
+	     			<img src="images/es.svg">
+	   			</div>
+	   			<a href="#">
+	     			<img src="images/close.jpg" > 
+	   			</a>
+	   			<h1 class="pays">Espagne</h1>
+	   			<div class="morts" dir="ladiv">
+	     			<div>1012</div>
+	   			</div>
+	    		<div class="cas" dir="ladiv">
+	     			<div>3.7%</div>
+	   			</div>
+
+			</div>
+
+			<div class="card" id="hongrie">
+	   			<div class="drapeau">
+	     			<img src="images/hu.svg">
+	  			 </div>
+	   			<a href="#">
+	     			<img src="images/close.jpg" > 
+	   			</a>
+	   			<h1 class="pays">Hongrie</h1>
+	  			<div class="morts" dir="ladiv">
+	     			<div>694</div>
+	   			</div>
+	    		<div class="cas" dir="ladiv">
+	     			<div>2.8%</div>
+	   			</div>
+		</div>
+
+		<div id="legend">
+			<div>
+				<span class="square" style="background-color: #fe5e54"></span>Nombre de morts par million d'habitant.
+			</div>
+			<div>
+				<span class="square" style="background-color: #fcd200"></span>Nombre de cas connuspar centaines d'habitants.
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="covid.js"></script>
+</html>
