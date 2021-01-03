@@ -1,92 +1,64 @@
-console.error("covid")
-
-var fr = document.getElementById("mapFrance")
-fr.addEventListener("click", function(){
-    var x = document.getElementById("card_fr")
-    x.style.display = "block"
-})
-
-
-
-var fr = document.getElementById("closeFrance")
-
-fr.addEventListener("click", function(e){  
-e.preventDefault();
-showCard(this.card_covid); 
-	
-
-function showCardfrance(("card_covid") {
-	document.getElementById("card_fr").style.display = "none"
+var data = {
+	"it": {
+		"name": "Italie",
+		"cpc": 3,
+		"dpm": 1062
+	  },
+	"fr": {
+		"name": "France",
+		"cpc": 3.5,
+		"dpm": 853
+	},
+	"es": {
+		"name": "Espagne",
+		"cpc": 3.7,
+		"dpm": 1012
+	},
+	"be": {
+		"name": "Belgique",
+		"cpc": 5.3,
+		"dpm": 1549
+	},
+	"hu": {
+		"name": "Hongrie",
+		"cpc": 2.8,
+		"dpm": 694
+	},
 }
 
-var be = document.getElementById("mapBelgique")
- 	fr.addEventListener("click", 2)
+function showCard(id) {
+	var value = data[id];
+	var div = document.createElement('div');
+	div.classList.add('card');
 
- 	function 2(){
- 		var x = document.getElementById("card_be")
- 		x.style.display = "block"
- 	}
+	div.innerHTML = `
+	<div class="drapeau">
+		<img src="images/${id}.svg">
+	</div>
+	<a href="#">
+		<img src="images/close.jpg" > 
+	</a>
+	<h1 class="pays">${value.name}</h1>
+	<div class="morts" style="height: ${value.dpm / 10}px">
+		<div>${value.dpm}</div>
+	</div>
+	<div class="cas" style="height: ${value.cpc * 10}px">
+		<div>${value.cpc}%</div>
+	</div>
+	`;
 
- 	var be = document.getElementById("closeBelgique")
-	  be.addEventListener("click", function(e2){  
-	   e2.preventDefault();    
-	   showCard(this.card_covid); 
-	
-
-function showCardbelgique(("card_covid") {
-	document.getElementById("card_be").style.display = "none"
+	document.getElementById('covid-cards').appendChild(div);
+	div.querySelector('a').onclick = function(e) {
+		e.preventDefault();
+		div.remove()
+	};
 }
 
-var it = document.getElementById("mapItalie")
- 	it.addEventListener("click", 3)
+var areas = document.querySelectorAll('#left-map map>area')
 
- 	function 3(){
- 		var x = document.getElementById("card_it")
- 		x.style.display = "block"
- 	}
-
- 	var it = document.getElementById("closeItalie")
-	  it.addEventListener("click", function(e3){  
-	   e3.preventDefault();    
-	   showCard(this.card_covid); 
-	
-
-function showCardfrance(("card_covid") {
-	document.getElementById("card_it").style.display = "none"
-}
-
-var es = document.getElementById("mapEspagne")
- 	es.addEventListener("click", 4)
-
- 	function 4(){
- 		var x = document.getElementById("card_es")
- 		x.style.display = "block"
- 	}
-
- 	var es = document.getElementById("closeEspagne")
-	  es.addEventListener("click", function(e4){  
-	   e4.preventDefault();    
-	   showCard(this.card_covid); 
-	
-
-function showCardEspagne(("card_covid") {
-	document.getElementById("card_es").style.display = "none"
-}
-
-var hu = document.getElementById("mapHongrie")
- 	hu.addEventListener("click", 5)
-
- 	function 5(){
- 		var x = document.getElementById("card_hu")
- 		x.style.display = "block"
- 	}
-
- 	var hu = document.getElementById("closeHongrie")
-	  hu.addEventListener("click", function(e5){  
-	   e5.preventDefault();    
-	   showCard(this.card_covid); 
-	
-
-function showCardHongrie(("card_covid") {
-	document.getElementById("card_hu").style.display = "none"
+for (i = 0; i < areas.length; i++) {
+	areas[i].addEventListener("click", function(e){
+		e.preventDefault();
+		showCard(this.id);
+	});
 }

@@ -59,7 +59,8 @@ a{
 
 .card>.morts>div, .card>.cas>div {
 	position: absolute;
-	bottom: 100%;
+	font-size: 0.8em;
+	top: -20px;
 	width: 100%;
 	text-align: center;
 }
@@ -72,46 +73,6 @@ a{
 .card>.cas{
 	background-color:#fcd200;
 	left: 50%;
-}
-
-#france>.morts{
-	height: 85px;
-}
-
-#france>.cas{
-	height: 35px;
-}
-
-#belgique>.morts{
-	height: 155px;
-}
-
-#belgique>.cas{
-	height: 53px;
-}
-
-#italie>.morts{
-	height: 106px;
-}
-
-#italie>.cas{ 
-	height: 30px;
-}
-
-#espagne>.morts{
-	height: 101px;
-}
-
-#espagne>.cas{
-	height: 37px;
-}
-
-#hongrie>.morts{
-	height: 69px;
-}
-
-#hongrie>.cas{
-height: 28px;
 }
 
 #legend{
